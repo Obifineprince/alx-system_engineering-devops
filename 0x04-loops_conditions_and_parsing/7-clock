@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
+# script that displays the time for 12 hours and 59 minutes
 
-# Script: display_time
-# Description: Displays the time in a 12-hour format with minutes ranging from 1 to 59.
+i=0
 
-hour=0
+while [ $i -le 12 ]; do
+	echo "Hour: $i"
 
-while [ $hour -le 12 ]; do
-  echo "Hour: $hour"
-
-  minute=1
-  while [ $minute -lt 60 ]; do
-    echo "$minute"
-    ((minute++))
-  done
-
-  ((hour++))
+	j=1
+	while [ $j -lt 60 ]; do
+		echo "$j"
+		((j++))
+	done
+	((i++))
 done
