@@ -1,26 +1,28 @@
 #!/usr/bin/env bash
 
-counter=1
+# Script: superstitious_numbers
+# Description: Displays numbers from 1 to 20 with specific messages for certain iterations.
+#              - For 'i' equal to 4, it displays "4" and "bad luck from China".
+#              - For 'i' equal to 9, it displays "9" and "bad luck from Japan".
+#              - For 'i' equal to 17, it displays "17" and "bad luck from Italy".
+#              - For other values of 'i', it displays the number only.
 
-while [ $counter -le 20 ]
-do
-  case $counter in
+i=1
+
+while [ $i -le 20 ]; do
+  case $i in
     4)
-      echo $counter
-      echo "bad luck from China"
+      echo -e "$i\nbad luck from China"
       ;;
     9)
-      echo $counter
-      echo "bad luck from Japan"
+      echo -e "$i\nbad luck from Japan"
       ;;
     17)
-      echo $counter
-      echo "bad luck from Italy"
+      echo -e "$i\nbad luck from Italy"
       ;;
     *)
-      echo $counter
+      echo "$i"
       ;;
   esac
-
-  ((counter++))
+  ((i+=1))
 done

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+# This script displays the text "Best School" 10 times
 
-count=0
-until [ $count -eq 10 ]; do
-    echo "Best School"
-    ((count++))
+count=0  # Initialize a variable to keep track of the number of times "Best School" has been displayed
+
+until ((count==10)); do  # Loop until the count is equal to 10
+	echo "Best School"  # Display the text "Best School"
+	((count++))  # Increment the count by 1
 done
