@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Script: extract_user_info
+# Description: Displays the username, id, and home path from /etc/passwd based on /etc/shadow data.
+
+while read -r LINE; do
+    echo "$LINE" | cut -d ":" -f 1,3,6
+done </etc/passwd
