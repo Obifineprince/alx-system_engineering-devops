@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-
 # This script shows Best School 10 times
 
-count=0  
-# Initialize a variable to keep track of the number of times "Best School" has been displayed
+i=0  # Initialize a variable to keep track of the number of times "Best School" has been displayed
 
-while ((count<10)); do  # Loop while the count is less than 10
+while ((i<10)); do  # Loop while the count is less than 10
 	echo "Best School"  # Display the text "Best School"
-	((count++))  # Increment the count by 1
+	((i++))  # Increment the count by 1
 done
