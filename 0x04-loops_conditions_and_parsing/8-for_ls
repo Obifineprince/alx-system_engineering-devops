@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
-
-# Script: 8-for_ls
-# Description: Displays the content of the current directory in a list format,
-#              showing only the part of the name after the first dash.
-#              Excludes hidden files.
+# shows content of the current directory in a list format
 
 for i in *; do
-  # Using the 'cut' command to extract the part of the name after the first dash.
-  echo "$i" | cut -d '-' -f2
+	echo "$i" | cut -d '-' -f2
 done
