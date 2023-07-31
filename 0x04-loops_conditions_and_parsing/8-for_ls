@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-for file in *; do
-  if [ -f "$file" ] && [[ "$file" != .* ]]; then
-    name=${file#*-}
-    echo "$name"
-  fi
+# Script: 8-for_ls
+# Description: Displays the content of the current directory in a list format,
+#              showing only the part of the name after the first dash.
+#              Excludes hidden files.
+
+for i in *; do
+  # Using the 'cut' command to extract the part of the name after the first dash.
+  echo "$i" | cut -d '-' -f2
 done
